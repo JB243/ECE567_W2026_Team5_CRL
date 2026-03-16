@@ -38,6 +38,8 @@ pip install "numpy==1.23.5"
 * Atari (`JB243`)
 
 ```bash
+conda activate continual_rl
+
 # foreground run
 unset LD_LIBRARY_PATH
 OMP_NUM_THREADS=1 PYTHONUNBUFFERED=1 CUDA_VISIBLE_DEVICES=0 \
