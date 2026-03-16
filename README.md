@@ -49,7 +49,7 @@ python main.py --config-file configs/atari/pnc_atari.json --output-dir tmp_atari
 OMP_NUM_THREADS=1 PYTHONUNBUFFERED=1 CUDA_VISIBLE_DEVICES=0 \
 python main.py --config-file configs/atari/clear_atari.json --output-dir tmp_atari3
 
-# alternatively, background run
+# background run
 mkdir -p tmp_atari1
 nohup bash -lc 'unset LD_LIBRARY_PATH; OMP_NUM_THREADS=1 PYTHONUNBUFFERED=1 CUDA_VISIBLE_DEVICES=0 python main.py --config-file configs/atari/ewc_atari.json --output-dir tmp_atari1' > nohup_ewc_atari1.out 2>&1 &
 mkdir -p tmp_atari2
