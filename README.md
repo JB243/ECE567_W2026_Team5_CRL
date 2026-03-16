@@ -35,7 +35,7 @@ pip install "numpy==1.23.5"
 
 ## Environments
 
-* Atari -- `JB243`
+* Atari (`JB243`)
 
 ```bash
 # foreground run
