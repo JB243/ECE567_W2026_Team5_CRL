@@ -37,6 +37,9 @@ pip install "numpy==1.23.5"
 
 * Atari (`JB243`)
 
+In the CoRA, it is said that “due to compute constraints, we only train for 2 cycles compared to the original experiments which used 5
+learning cycles.”
+
 ```bash
 conda activate continual_rl
 
