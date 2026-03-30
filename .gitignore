@@ -143,8 +143,12 @@ cython_debug/
 # Mac
 .DS_Store
 
-**/tmp
 **/*.*~
+# Ignore large experiment files but keep logs/results
+**/tmp/**/model.tar
+**/tmp/**/model_bak.tar
+**/tmp/**/*.fbt
+**/tmp/**/events.out.tfevents.*
 *.pyc
 
 # VSCode

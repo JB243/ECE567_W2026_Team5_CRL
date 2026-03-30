@@ -78,31 +78,31 @@ TASKS_PROCGEN = {
 MODELS_PROCGEN = {
     "IMPALA": dict(
         name='impala',
-        runs=[f'cora/impala_procgen_resblocks/0/run_{i}/impala_procgen_resblocks/0' for i in range(20)],
+        runs=['impala0_procgen/impala_procgen/0'],
         color='rgba(77, 102, 133, 1)',
         color_alpha=0.2,
     ),
     "EWC": dict(
         name='ewc',
-        runs=[f'cora/ewc_procgen_resblocks/0/run_{i}/ewc_procgen_resblocks/0' for i in [0,1,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]], # 2, 3 died, replaced with 20,21
+        runs=['tmp_procgen_ewc/ewc_procgen/0'],
         color='rgba(214, 178, 84, 1)',
         color_alpha=0.2,
     ),
     "ONLINE EWC": dict(
         name='online ewc',
-        runs=[f'cora/online_ewc_procgen_resblocks/0/run_{i}/online_ewc_procgen_resblocks/0' for i in range(20)],
+        runs=['tmp_procgen_online_ewc/online_ewc_procgen/0'],
         color='rgba(106, 166, 110, 1)',
         color_alpha=0.2,
     ),
     "P&C": dict(
         name='pnc',
-        runs=[f'cora/pnc_procgen_resblocks/0/run_{i}/pnc_procgen_resblocks/0' for i in range(20)],
+        runs=['tmp_procgen_pnc/pnc_procgen/0'],
         color='rgba(152, 67, 63, 1)',
         color_alpha=0.2,
     ),
     "CLEAR": dict(
         name='clear',
-        runs=[f'cora/clear_procgen_resblocks/0/run_{i}/clear_procgen_resblocks/0' for i in [0,1,2,3,4,5,6,7,8,9,10,11,12,13,15,16,17,18,21,22]], #,14, 19 died, replaced with 21, 222
+        runs=['clear0_procgen/clear_procgen/0'],
         color='rgba(210, 140, 217, 1)',
         color_alpha=0.2,
     ),
@@ -117,8 +117,8 @@ PROCGEN = dict(
     num_task_steps=5e6,
     grid_size=[2, 3],
     which_exp='procgen',
-    xaxis_tickvals=list(np.arange(0, 150e6 + 1, 30e6)),
-    cache_dir='tmp' #/cache/data_pkls/procgen_resblocks/',
+    xaxis_tickvals=list(np.arange(0, 150e6 + 1, 25e6)),
+    cache_dir='tmp',
 )
 
 
@@ -141,16 +141,13 @@ TASKS_MINIHACK = {
 }
 
 
-impala_minihack_paths = [f'impala{i}_minihack' for i in range(5)]
-impala_minihack_paths.extend([f'vader/cora/impala_minihack_paperdefaults/0/run_{i}/**' for i in range(5)])
-clear_minihack_paths = [f'clear{i}_minihack' for i in range(5)]
-clear_minihack_paths.extend([f'vader/cora/clear_minihack_paperdefaults_vader/0/run_{i}/**' for i in range(5)])
+impala_minihack_paths = ['impala1_minihack', 'impala2_minihack', 'henry_runs/impala_minihack_paperdefaults/0', 'henry_runs/impala_minihack_paperdefaults/1', 'henry_runs/impala_minihack_paperdefaults/2']
+clear_minihack_paths = ['clear0_minihack', 'clear1_minihack', 'clear2_minihack', 'clear3_minihack', 'clear4_minihack']
 MODELS_MINIHACK = {
     "IMPALA": dict(
         name='impala',
         runs=impala_minihack_paths,
-        # color='rgba(64, 132, 133, 1)',
-        color='rgba(77, 102, 133, 1)',
+        color='rgba(100, 149, 237, 1)',
         color_alpha=0.2,
     ),
     "CLEAR": dict(
@@ -350,8 +347,8 @@ if __name__ == '__main__':
     TO_PLOT['exp_dir'] = args.d
 
     #exp_data = ATARI
-    exp_data = PROCGEN
-    #exp_data = MINIHACK
+    #exp_data = PROCGEN
+    exp_data = MINIHACK
     #exp_data = CHORE_VARY_ENV
     #exp_data = CHORE_VARY_TASK
     #exp_data = CHORE_VARY_OBJECT

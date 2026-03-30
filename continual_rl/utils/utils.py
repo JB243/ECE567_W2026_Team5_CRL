@@ -106,7 +106,7 @@ class Utils(object):
         """
         # Enable both torch dtypes and numpy dtypes
         numpy_to_torch_dtype_dict = {
-            np.bool: torch.bool,
+            np.bool_: torch.bool,
             np.uint8: torch.uint8,
             np.int8: torch.int8,
             np.int16: torch.int16,

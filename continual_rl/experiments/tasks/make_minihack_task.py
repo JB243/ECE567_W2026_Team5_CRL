@@ -1,3 +1,4 @@
+import minihack
 import gym
 import numpy as np
 import os
@@ -22,25 +23,31 @@ class MiniHackMakeVecSafeWrapper(gym.Wrapper):
         super().__init__(env)
         self.basedir = os.getcwd()
 
+    def _vardir(self):
+        # In NLE 0.9.x, _vardir moved from the env to env.nethack._vardir.
+        # gym.make() also no longer wraps with TimeLimit, so self.env is the
+        # raw MiniHack env directly (not self.env.env as in the original code).
+        return self.env.nethack._vardir
+
     def step(self, action: int):
-        os.chdir(self.env.env._vardir)
+        os.chdir(self._vardir())
         x = self.env.step(action)
         os.chdir(self.basedir)
         return x
 
     def reset(self):
-        os.chdir(self.env.env._vardir)
+        os.chdir(self._vardir())
         x = self.env.reset()
         os.chdir(self.basedir)
         return x
 
     def close(self):
-        os.chdir(self.env.env._vardir)
+        os.chdir(self._vardir())
         self.env.close()
         os.chdir(self.basedir)
 
     def seed(self, core=None, disp=None, reseed=False):
-        os.chdir(self.env.env._vardir)
+        os.chdir(self._vardir())
         self.env.seed(core, disp, reseed)
         os.chdir(self.basedir)
 

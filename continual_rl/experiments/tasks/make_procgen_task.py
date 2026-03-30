@@ -1,11 +1,12 @@
 import gym
+import procgen  # noqa: F401 - required to register procgen envs with gym
 
 from .image_task import ImageTask
 
 
 def make_procgen(env_name, num_levels=0, start_level=0, distribution_mode="easy"):
     env = gym.make(
-        f"procgen:procgen-{env_name}",
+        f"procgen-{env_name}",
         num_levels=num_levels,
         start_level=start_level,
         distribution_mode=distribution_mode,

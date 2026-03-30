@@ -267,6 +267,28 @@ def get_available_experiments():
             cycle_count=5,
         ),
 
+        "procgen_6_tasks_3_cycles_1M": create_procgen_sequence_loader(
+            "procgen_6_tasks_3_cycles_1M",
+            ["climber-v0",
+             "dodgeball-v0",
+             "ninja-v0",
+             "starpilot-v0",
+             "bigfish-v0",
+             "fruitbot-v0"],
+            num_timesteps=1e6,
+            task_params=dict(
+                num_levels=200,
+                start_level=0,
+                distribution_mode="easy",
+            ),
+            add_eval_task=True,
+            eval_task_override_params=dict(
+                num_levels=0,
+            ),
+            continual_testing_freq=0.25e6,
+            cycle_count=3,
+        ),
+
         "procgen_climber_fixed_seq": create_procgen_sequence_loader(
             "procgen_climber_fixed_seq",
             ["climber-v0" for _ in range(4)],
