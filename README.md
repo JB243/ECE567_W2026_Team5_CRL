@@ -16,6 +16,8 @@ Join our [**discord**](https://discord.gg/VcNpAspbPm) for discussion or question
 }
 ```
 
+![CRL Preview](./ECE567_W2026_Team5_CRL.gif)
+
 ## SANER
 Code and instructions for running SANER coming soon. SANER utilizes [**home_robot**](https://github.com/facebookresearch/home-robot).
 
