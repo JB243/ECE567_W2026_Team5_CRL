@@ -3,7 +3,7 @@
 This repository provides a simple way to run continual reinforcement learning experiments in PyTorch, including 
 evaluating existing baseline algorithms, writing your own agents, and specifying custom experiments.
 
-Check out [**our paper**](https://arxiv.org/abs/2110.10067) for full experimental results on benchmarks.
+Check out [**the paper**](https://arxiv.org/abs/2110.10067) for full experimental results on benchmarks.
 
 Join our [**discord**](https://discord.gg/VcNpAspbPm) for discussion or questions.
 
