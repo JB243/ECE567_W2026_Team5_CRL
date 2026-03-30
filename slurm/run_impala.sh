@@ -10,8 +10,6 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=32G
 
-# NOTE: Check your account name and adjust --account if needed:
-# #SBATCH --account=your_account
 
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate cora_minihack
