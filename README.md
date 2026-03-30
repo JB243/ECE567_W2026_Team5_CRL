@@ -17,7 +17,7 @@ Join our [**discord**](https://discord.gg/VcNpAspbPm) for discussion or question
 ```
 
 <a href="./ECE567_W2026_Team5_CRL.pdf">
-  <img src="./ECE567_W2026_Team5_CRL.gif" alt="ECE567 Team 5 CRL Preview" width="500">
+  <img src="./ECE567_W2026_Team5_CRL.gif" alt="ECE567 Team 5 CRL Preview" width="750">
 </a>
 
 ## SANER
