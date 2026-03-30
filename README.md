@@ -16,9 +16,11 @@ Join our [**discord**](https://discord.gg/VcNpAspbPm) for discussion or question
 }
 ```
 
-<a href="./ECE567_W2026_Team5_CRL.pdf">
-  <img src="./ECE567_W2026_Team5_CRL.gif" alt="ECE567 Team 5 CRL Preview" width="750">
-</a>
+<p align="center">
+  <a href="./ECE567_W2026_Team5_CRL.pdf">
+    <img src="./ECE567_W2026_Team5_CRL.gif" alt="ECE567 Team 5 CRL Preview" width="500">
+  </a>
+</p>
 
 ## SANER
 Code and instructions for running SANER coming soon. SANER utilizes [**home_robot**](https://github.com/facebookresearch/home-robot).
